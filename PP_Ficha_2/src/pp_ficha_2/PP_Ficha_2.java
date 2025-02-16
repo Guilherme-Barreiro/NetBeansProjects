@@ -129,9 +129,9 @@ public class PP_Ficha_2 {
         for(int j = 0; j < listaB.length; j++, i++)
             novaLista[i] = listaB[j];
         
+        System.out.println("\nA)");
         for(i = 0; i < novaLista.length; i++)
             System.out.print(novaLista[i] + ",");
-        
         
         int repetidos = 0;
         for(i = 0; i < listaA.length; i++)
@@ -139,6 +139,17 @@ public class PP_Ficha_2 {
                 if(listaA[i] == listaB[j])
                     repetidos++;
             
-        System.out.println("\n\nn repetidos: "+repetidos);
+        System.out.println("\n\nB)");
+        System.out.println("repetidos: "+repetidos); 
+        
+        
+        int[] novoVetor = new int[listaA.length - 1];
+        for(i = 0; i < listaA.length; i++)
+            for(int j = 0; j < listaB.length; j++)
+                if(listaA[i] == listaB[j])
+                    novoVetor[i] = listaA[i];
+        
+        System.out.println("\nC)");
+        System.out.println("repetidos: "+repetidos);
     }
 }
