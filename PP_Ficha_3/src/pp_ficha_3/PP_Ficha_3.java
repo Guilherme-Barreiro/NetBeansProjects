@@ -35,9 +35,12 @@ public class PP_Ficha_3 {
         
         System.out.println("\n2.");
         int[] vetor = new int[10]; 
-        for(int i = 0; i < vetor.length; i++ ){
+        int divisor = 0;
+        for(int i = 0; i < vetor.length; i++ )
             vetor[i] =  random.nextInt(89) + 10;
-            System.out.print(vetor[i]+ " ");
-        }
+        
+        for(int i = 0; i < vetor.length; i++ )
+            divisor = vetor[i] - 1;
+            if(vetor[i] / )
     }
 }
