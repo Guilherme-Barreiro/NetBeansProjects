@@ -4,6 +4,8 @@
  */
 package pp_ficha_4;
 
+import book.Book;
+import book.Authors;
 import exchange.CurrencyRates;
 
 /**
@@ -18,6 +20,8 @@ public class PP_Ficha_4 {
     static User user1, user2;
     static Expenses expenses;
     static CurrencyRates rates;
+    static Book book1, book2;
+    static Authors author1;
 
     public static void main(String[] args) {
 
@@ -68,12 +72,19 @@ public class PP_Ficha_4 {
 //        System.out.println(user1.expenses.foodValues[0]);
         double somaDespesas = 0.0;
         for(int i = 0; i < 31; i++){
-            somaDespesas = somaDespesas += user1.expenses.carValues[i];
+            somaDespesas += user1.expenses.carValues[i];
         }
         System.out.println("total: " + somaDespesas);
-        
+
         System.out.println("Despesas user em dolar: " + somaDespesas * rates.conversion_euro_dolar);
         System.out.println("Despesas user em iene: " + somaDespesas * rates.conversion_euro_iene);
         System.out.println("Despesas user em GBP: " + somaDespesas * rates.conversion_euro_GBP);
+        
+        
+        book1.ano = 123;
+        author1.acronimo = new char[]{'B', 'r', 'u', 'n', 'o'};
+
+        System.out.println(book1.ano);     
+        System.out.println(author1.acronimo);
     }
 }
