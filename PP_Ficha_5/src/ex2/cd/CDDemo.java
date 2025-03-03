@@ -6,6 +6,7 @@ package ex2.cd;
 
 import ex2.Artist;
 import ex2.Track;
+import ex2.cd.CD;
 
 /**
  *
@@ -13,23 +14,32 @@ import ex2.Track;
  */
 public class CDDemo {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
+        Artist a1 = new Artist("Artista 1", "1977-03-04", "German");
         
-        Artist a1 = new Artist("Anselmo Ralf", "10/28/2009", "Preto");
-        Artist a2 = new Artist("baterista do anselmo", "86/04/2009", "Preto");
-        Artist a3 = new Artist("guitarrista do anselmo", "15/82/2009", "Preto");
-        Artist a4 = new Artist("pianista do anselmo", "99/18/2009", "Preto");
-        Artist[] artists = { a1, a2, a3, a4 };
+        Artist[] artists = {a1};
         
-        Track t1 = new Track(1, "Mãos no volante", 216, artists);
-        Track t2 = new Track(2, "Mundo nos chama loucos", 271, artists);
+        Track t1 = new Track(1, "Ho Hey", 90, "Lumineers");
+        Track t2 = new Track(2, "Stubborn Love", 105, "Wesley Schltz");
         
-        CD cd = new CD("Nlack Biggers", "Nosso primeiro CD", 487, 2007, "editora Braba");
-
-        System.out.println(cd);
+        CD cd = new CD("The Lumineers", "The Lumineers", 195, 2012, "Dualtone Records", artists);
+        
+        cd.musicas[0] = t1;
+        cd.musicas[14] = t2;
+        
+        System.out.println("Nome do cd: " + cd.nomeCD);
+        System.out.println("Ano de lançamento: " + cd.anoLancamento);
+        System.out.println("Editora: " + cd.editora);
+        int nTracks = cd.musicas.length;
+        
+        for (int i = 0; i < nTracks; i++) {
+            if (cd.musicas[i] != null) {
+                Track t = cd.musicas[i];
+                System.out.println("Música número: " + t.numFaixa + " com título: " + t.nomeFaixa);
+                System.out.println("Duração (em segundos): " + t.duracao);
+                System.out.println("Autor da música: " + t.nomeArtist);
+            }
+        }
     }
-    
+
 }

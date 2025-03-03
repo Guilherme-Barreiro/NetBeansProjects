@@ -14,7 +14,7 @@ import ex2.Track;
 public class CD {
 
     protected final int ELEMENTOS_SIZE = 50;
-    protected final int MUSICAS_SIZE = 15;
+    protected final int MUSICAS_SIZE = 50;
     protected int id;
     protected String nomeBanda;
     protected String nomeCD;
@@ -25,13 +25,13 @@ public class CD {
     protected Track[] musicas;
     protected static int nextId = 1;
 
-    public CD(String tnomeBanda, String tnomeCD, int ttempoTotal, int tanoLancamento, String teditora) {
-        nomeBanda = tnomeBanda;
-        nomeCD = tnomeCD;
-        tempoTotal = ttempoTotal;
-        anoLancamento = tanoLancamento;
-        editora = teditora;
-        elementosBanda = new Artist[ELEMENTOS_SIZE];
+    public CD(String nomeBanda, String nomeCD, int tempoTotal, int anoLancamento, String editora, Artist[] elementosBanda) {
+        this.nomeBanda = nomeBanda;
+        this.nomeCD = nomeCD;
+        this.tempoTotal = tempoTotal;
+        this.anoLancamento = anoLancamento;
+        this.editora = editora;
+        this.elementosBanda = elementosBanda;
         musicas = new Track[MUSICAS_SIZE];
         id = nextId++;
     }

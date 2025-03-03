@@ -10,12 +10,12 @@ package ex2;
  */
 public class Track {
 
-    protected int id;
-    protected int numFaixa;
-    protected String nomeFaixa;
-    protected int duracao;
-    protected String nomeArtist;
-    protected static int nextId = 1;
+    public int id;
+    public int numFaixa;
+    public String nomeFaixa;
+    public int duracao;
+    public String nomeArtist;
+    public static int nextId = 1;
 
     public Track(int tnumFaixa, String tnomeFaixa, int tduracao, String tnomeArtist) {
         numFaixa = tnumFaixa;
