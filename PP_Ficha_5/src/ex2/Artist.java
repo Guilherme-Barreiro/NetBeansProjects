@@ -10,11 +10,11 @@ package ex2;
  */
 public class Artist {
 
-    protected int id;
-    protected String nomeArtista;
-    protected String nacionalidade;
-    protected String birthDate;
-    protected static int nextId = 1;
+    public int id;
+    public String nomeArtista;
+    public String nacionalidade;
+    public String birthDate;
+    public static int nextId = 1;
 
     public Artist(String tnomeArtista, String tnacionalidade, String tbirthDate) {
         nomeArtista = tnomeArtista;
