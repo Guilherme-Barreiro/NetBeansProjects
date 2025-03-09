@@ -9,13 +9,13 @@ package ex2;
  * @author guiba
  */
 public class Track {
-
+    public static int nextId = 1;
+    
     public int id;
     public int numFaixa;
     public String nomeFaixa;
     public int duracao;
     public String nomeArtist;
-    public static int nextId = 1;
 
     public Track(int tnumFaixa, String tnomeFaixa, int tduracao, String tnomeArtist) {
         numFaixa = tnumFaixa;

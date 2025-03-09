@@ -17,11 +17,11 @@ public class Artist {
     public static int nextId = 1;
 
     public Artist(String tnomeArtista, String tnacionalidade, String tbirthDate) {
+        id = nextId++;
+        
         nomeArtista = tnomeArtista;
         nacionalidade = tnacionalidade;
         birthDate = tbirthDate;
-        id = nextId++;
-
     }
 
     @Override
