@@ -23,12 +23,35 @@ public class Demo {
         Ingrediente[] ingCarnivora = {i2, i4, i6};
         Pizza p3 = new Pizza("Carnívora", "Para os amantes de carne", 20.99, Tamanho.PEQUENA, ingCarnivora);
 
+        Pizza p4 = new Pizza("Carnívora", "Para os amantes de carne", 20.99, Tamanho.PEQUENA, ingCarnivora);
+        Pizza p5 = new Pizza("Carnívora", "Para os amantes de carne", 20.99, Tamanho.PEQUENA, ingCarnivora);
+        Pizza p6 = new Pizza("Carnívora", "Para os amantes de carne", 20.99, Tamanho.PEQUENA, ingCarnivora);
+        Pizza p7 = new Pizza("Carnívora", "Para os amantes de carne", 20.99, Tamanho.PEQUENA, ingCarnivora);
+        Pizza p8 = new Pizza("Carnívora", "Para os amantes de carne", 20.99, Tamanho.PEQUENA, ingCarnivora);
+        Pizza p9 = new Pizza("Carnívora", "Para os amantes de carne", 20.99, Tamanho.PEQUENA, ingCarnivora);
+        Pizza p10 = new Pizza("Carnívora", "Para os amantes de carne", 20.99, Tamanho.PEQUENA, ingCarnivora);
+        Pizza p11 = new Pizza("Carnívora", "Para os amantes de carne", 20.99, Tamanho.PEQUENA, ingCarnivora);
+        Pizza p12 = new Pizza("Carnívora", "Para os amantes de carne", 20.99, Tamanho.PEQUENA, ingCarnivora);
+        
+        Pizza[] ementaTeste = {p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12};
+        Ementa e2 = new Ementa("Designacao", "Descricao", "12/03/2025", ementaTeste);
+//        System.out.println(e2);
+
+        
+
         Pizza[] ementaAtual = {p1, p2, p3};
         Ementa e1 = new Ementa("Designacao", "Descricao", "12/03/2025", ementaAtual);
         
         p1.addIngrediente(i2);
         p1.addIngrediente(i2);
-        System.out.println(e1);
+        p1.removeIngrediente(i6);
+        p1.removeIngrediente(i2);
+        
+        
+//        p1.searchIngredienteDetails(i2);
+//        System.out.println(p1.getCaloriasPizza());
+//        System.out.println(p1);
+//        System.out.println(e1);
     }
 
 }

@@ -13,7 +13,7 @@ public enum Origem {
             case MINERAL:
                 return "O ingrediente é de origem MINERAL.";
             default:
-                return "Erro";
+                return "Eriro";
         }
     }
 }

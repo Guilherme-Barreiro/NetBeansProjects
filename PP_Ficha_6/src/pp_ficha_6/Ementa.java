@@ -1,7 +1,7 @@
 package pp_ficha_6;
 
 public class Ementa {
-
+    private final int MAX_PIZZAS = 10;
     private int id;
     private String designacao;
     private String descricao;
@@ -12,12 +12,13 @@ public class Ementa {
     private static int nextId = 1;
 
     public Ementa(String designacao, String descricao, String dataInicio, String dataFim, Pizza[] pizzas) {
+        System.out.println(pizzas.length);
         this.designacao = designacao;
         this.descricao = descricao;
         this.dataInicio = dataInicio;
         this.dataFim = dataFim;
         this.nPizzas = pizzas.length;
-        this.pizzas = new Pizza[nPizzas];
+        this.pizzas = new Pizza[MAX_PIZZAS];
         this.id = nextId++;
 
         for (int i = 0; i < pizzas.length; i++) {
@@ -30,7 +31,7 @@ public class Ementa {
         this.descricao = descricao;
         this.dataInicio = dataInicio;
         this.nPizzas = pizzas.length;
-        this.pizzas = new Pizza[nPizzas];
+        this.pizzas = new Pizza[MAX_PIZZAS];
         this.id = nextId++;
 
         for (int i = 0; i < pizzas.length; i++) {

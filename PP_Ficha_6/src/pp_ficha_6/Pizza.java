@@ -36,6 +36,34 @@ public class Pizza {
         nIngredientes++;
     }
 
+    public void removeIngrediente(Ingrediente ingr) {
+        for (int i = 0; i < nIngredientes; i++) {
+            if (ingredientes[i].equals(ingr)) {
+                for (int j = i; j < nIngredientes-1; j++) {
+                    ingredientes[j] = ingredientes[j+1];
+                }
+                nIngredientes--;
+                break;
+            }
+        }
+    }
+
+    public void searchIngredienteDetails(Ingrediente ingr){
+        for (int i = 0; i < nIngredientes; i++) {
+            if (ingredientes[i].equals(ingr)) {
+                System.out.println(ingredientes[i]);
+            }
+        }    
+    }
+    
+    public int getCaloriasPizza() {
+        int totalCal = 0;
+        for (int i = 0; i < nIngredientes; i++) {
+            totalCal += ingredientes[i].getnCalorias();
+        }
+        return totalCal;
+    }
+    
     public int getId() {
         return id;
     }
@@ -97,9 +125,9 @@ public class Pizza {
         String ingredientesStr = "";
         for (int i = 0; i < nIngredientes; i++) {
             ingredientesStr += ingredientes[i];
-            if (i < nIngredientes - 1) {
+//            if (i < nIngredientes - 1) {
 //                ingredientesStr += "\n ";
-            }
+//            }
         }
 
         return "\n\tPizza{"
