@@ -1,7 +1,10 @@
 package pp_ficha_6;
 
 public class Ementa {
-    private final int MAX_PIZZAS = 10;
+
+    private static final int MAX_PIZZAS = 10;
+    private static int nextId = 1;
+
     private int id;
     private String designacao;
     private String descricao;
@@ -9,7 +12,6 @@ public class Ementa {
     private String dataFim;
     private Pizza pizzas[];
     private int nPizzas;
-    private static int nextId = 1;
 
     public Ementa(String designacao, String descricao, String dataInicio, String dataFim, Pizza[] pizzas) {
         System.out.println(pizzas.length);

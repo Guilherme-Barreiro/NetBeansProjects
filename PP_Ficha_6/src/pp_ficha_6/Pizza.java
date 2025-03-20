@@ -32,8 +32,9 @@ public class Pizza {
     }
 
     public void addIngrediente(Ingrediente ingr) {
-        ingredientes[nIngredientes] = ingr;
-        nIngredientes++;
+        
+        
+        ingredientes[nIngredientes++] = ingr;
     }
 
     public void removeIngrediente(Ingrediente ingr) {
