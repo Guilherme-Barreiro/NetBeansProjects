@@ -12,6 +12,7 @@ import Enum.Material;
  * @author guiba
  */
 public class Bike {
+
     private static int nextId = 1;
     private int id;
     private int numberOfGears;
@@ -22,7 +23,7 @@ public class Bike {
     private double price;
     private String guarantee;
 
-    public Bike(int numberOfGears, String mainColor, double wheelSize, Brakes_Type brakes, 
+    public Bike(int numberOfGears, String mainColor, double wheelSize, Brakes_Type brakes,
             Material material, double price, String guarantee) {
         this.id = nextId++;
         this.numberOfGears = numberOfGears;
@@ -33,7 +34,7 @@ public class Bike {
         this.price = price;
         this.guarantee = guarantee;
     }
-    
+
     public int getId() {
         return id;
     }
@@ -100,8 +101,16 @@ public class Bike {
 
     @Override
     public String toString() {
-        return "Bike{" + "id=" + id + ", numberOfGears=" + numberOfGears + ", mainColor=" + mainColor + ", wheelSize=" + wheelSize + ", brakes=" + brakes + ", material=" + material + ", price=" + price + ", guarantee=" + guarantee + '}';
+        return "Bike{"
+                + "\n\t\tid=" + id
+                + "\n\t\tnumberOfGears=" + numberOfGears
+                + "\n\t\tmainColor='" + mainColor + '\''
+                + "\n\t\twheelSize=" + wheelSize
+                + "\n\t\tbrakes=" + brakes
+                + "\n\t\tmaterial=" + material
+                + "\n\t\tprice=" + price
+                + "\n\t\tguarantee='" + guarantee + '\''
+                + '}';
     }
-    
-    
+
 }

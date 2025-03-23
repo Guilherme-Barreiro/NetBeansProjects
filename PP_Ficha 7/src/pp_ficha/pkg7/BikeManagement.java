@@ -3,30 +3,29 @@ package pp_ficha.pkg7;
 public class BikeManagement {
 
     private int nBikes;
-    private static int nextnBikes = 1;
 
     private MontainBike[] montainBikes;
     private int nMontainBikes;
-    private static int nextnMontainBikes = 1;
 
     private RoadBike[] roadBikes;
     private int nRoadBikes;
-    private static int nextnRoadBikes = 1;
 
     private static int MAX_TAM_MB = 20;
     private static int MAX_TAM_RB = 20;
 
     public BikeManagement() {
-        montainBikes = new MontainBike[MAX_TAM_MB + MAX_TAM_RB];
+        montainBikes = new MontainBike[MAX_TAM_MB];
+        roadBikes = new RoadBike[MAX_TAM_RB];
         this.nMontainBikes = 0;
+        this.nRoadBikes = 0;
     }
 
-    
     public void addMontainBike(MontainBike mb) {
         if (nMontainBikes >= MAX_TAM_MB) {
             if (expandMontainBike()) {
                 montainBikes[nMontainBikes] = mb;
                 nMontainBikes++;
+                nBikes = nextnBikes++;
             }
         } else {
             montainBikes[nMontainBikes] = mb;
