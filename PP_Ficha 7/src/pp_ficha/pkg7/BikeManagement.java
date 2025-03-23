@@ -25,13 +25,12 @@ public class BikeManagement {
             if (expandMontainBike()) {
                 montainBikes[nMontainBikes] = mb;
                 nMontainBikes++;
-                nBikes = nextnBikes++;
+                nBikes++;
             }
         } else {
             montainBikes[nMontainBikes] = mb;
             nMontainBikes++;
         }
-
     }
     public boolean expandMontainBike() {
         MontainBike[] arrayy = new MontainBike[montainBikes.length * 2];
@@ -81,6 +80,7 @@ public class BikeManagement {
             if (expandRoadBike()) {
                 roadBikes[nRoadBikes] = mb;
                 nRoadBikes++;
+                nBikes++;
             }
         } else {
             roadBikes[nRoadBikes] = mb;
