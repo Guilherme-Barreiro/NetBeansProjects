@@ -97,4 +97,11 @@ public class Bike {
     public void setGuarantee(String guarantee) {
         this.guarantee = guarantee;
     }
+
+    @Override
+    public String toString() {
+        return "Bike{" + "id=" + id + ", numberOfGears=" + numberOfGears + ", mainColor=" + mainColor + ", wheelSize=" + wheelSize + ", brakes=" + brakes + ", material=" + material + ", price=" + price + ", guarantee=" + guarantee + '}';
+    }
+    
+    
 }

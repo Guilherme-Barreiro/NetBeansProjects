@@ -8,16 +8,15 @@ public class RoadBike extends Bike {
     private String frameSize;
     private String observations;
 
-    public RoadBike(String handlebelt, String frameSize, String observations, int id, int numberOfGears, String mainColor, 
-            double wheelSize, Brakes_Type brakes, Material material, String price, String guarantee) {
-        super(id, numberOfGears, mainColor, wheelSize, brakes, material, price, guarantee);
+    public RoadBike(String handlebelt, String frameSize, String observations, int numberOfGears, String mainColor, 
+            double wheelSize, Brakes_Type brakes, Material material, double price, String guarantee) {
+        super(numberOfGears, mainColor, wheelSize, brakes, material, price, guarantee);
         this.handlebelt = handlebelt;
         this.frameSize = frameSize;
         this.observations = observations;
     }
 
-    
-    
+      
     public String getHandlebelt() {
         return handlebelt;
     }

@@ -1,6 +1,6 @@
 package pp_ficha.pkg7;
 
-import Enum.BikeTools_Type;
+import Enum.BT_Type;
 import Enum.Brakes_Type;
 import Enum.Material;
 import Enum.Suspension_Type;
@@ -8,9 +8,9 @@ import Enum.Suspension_Type;
 public class MontainBike extends Bike {
     private String numberOfLigths;
     private Suspension_Type suspension;
-    private BikeTools_Type bikeTools;
+    private BT_Type[] bikeTools;
 
-    public MontainBike(String numberOfLigths, Suspension_Type suspension, BikeTools_Type bikeTools, int numberOfGears, 
+    public MontainBike(String numberOfLigths, Suspension_Type suspension, BT_Type[] bikeTools, int numberOfGears, 
             String mainColor, double wheelSize, Brakes_Type brakes, Material material, double price, String guarantee) {
         super(numberOfGears, mainColor, wheelSize, brakes, material, price, guarantee);
         this.numberOfLigths = numberOfLigths;
@@ -34,12 +34,17 @@ public class MontainBike extends Bike {
         this.suspension = suspension;
     }
 
-    public BikeTools_Type getBikeTools() {
+    public BT_Type[] getBikeTools() {
         return bikeTools;
     }
 
-    public void setBikeTools(BikeTools_Type bikeTools) {
+    public void setBikeTools(BT_Type[] bikeTools) {
         this.bikeTools = bikeTools;
+    }
+
+    @Override
+    public String toString() {
+        return "MontainBike{" + "numberOfLigths=" + numberOfLigths + ", suspension=" + suspension + ", bikeTools=" + bikeTools + '}';
     }
     
     

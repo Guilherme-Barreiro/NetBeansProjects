@@ -1,8 +1,8 @@
 package Enum;
 
-public enum BikeTools_Type {
+public enum BT_Type {
     GARRAFA_DE_AGUA, KIT, REPARACAO_PNEU, CONTA_QUILOMETROS, ALFORGE, SUPORTE_TELEMOVEL;
-    public static String BikeTools_TypeToString(BikeTools_Type a) {
+    public static String BikeTools_TypeToString(BT_Type a) {
         switch (a) {
             case GARRAFA_DE_AGUA:
                 return "O tipo da tool é GARRAFA_DE_AGUA.";
